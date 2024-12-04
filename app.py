@@ -9,3 +9,7 @@ app = FastAPI()
 @app.get("/hello")
 async def hello_world():
     return {"message": "Hello!"}
+
+@app.get("/health")
+async def check_health():
+    return {"message": "Health is checked"}
