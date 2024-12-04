@@ -1,0 +1,2 @@
+fastapi==0.95.0
+uvicorn[ssl]==0.23.0  # Ensure SSL support is included
