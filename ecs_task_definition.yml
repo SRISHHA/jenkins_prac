@@ -1,0 +1,19 @@
+task_definition:
+  cpu: "312"
+  memory: "512"
+  network_mode: "bridge"
+  container_definitions:
+    - name: "opensolar"
+      essential: true
+      port_mappings:
+        - containerPort: 81
+          hostPort: 81
+          protocol: "tcp"
+          name: "opensolar-tcp-81"
+      mount_points: []
+      volumes_from: []
+  runtime_platform:
+    operating_system_family: "LINUX"
+    cpu_architecture: "X86_64"
+  requires_compatibilities:
+    - "EC2"  
